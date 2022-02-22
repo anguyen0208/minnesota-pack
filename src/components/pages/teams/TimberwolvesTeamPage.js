@@ -7,12 +7,9 @@ const TimberwolvesTeamPage = () => {
     return (
         <div>
             {/*<MainNavigationModule />*/}
-            <PlayerInfo />
             <div className="container">
                 <div className="wrapper">
-                    <h5>
-                        The <b>TimberWolves</b>
-                    </h5>
+                    <PlayerInfo/>
                 </div>
             </div>
         </div>

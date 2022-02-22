@@ -22,7 +22,7 @@ const ToggleContainer = styled.div`
     position: fixed;
     top: 0;
     left: 3%;
-    width: 12%;
+    width: 155px;
     border-color: transparent;
     background: ${colors.Navy};
     padding: .6rem .2rem .5rem .2rem;
@@ -35,10 +35,11 @@ const StyledToggle = styled.button`
     color: ${colors.Silver};
     border-color: transparent;
     background: transparent;
-    margin: 3% 0 0 30%; 
+    margin: 4% 0 0 30%; 
     display: block;
     place-items: center;
     font-size: 1.8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
     span{
         display: block;

@@ -14,7 +14,7 @@ import SchedulesPage from "./components/pages/schedules/SchedulesPage"
 import LynxTeamPage from "./components/pages/teams/LynxTeamPage"
 import TeamsPage from "./components/pages/teams/TimberwolvesTeamPage"
 
-function App() {
+export default function App() {
     const [navToggled, setNavToggled] = useState(false);
 
     const handleNavToggle = () => {
@@ -24,7 +24,6 @@ function App() {
     return (
         <div>
             <GlobalStyle />
-
             <HamburgerToggle handleNavToggle={handleNavToggle} />
             <Router>
                 {navToggled ? <Menu handleNavToggle={handleNavToggle} /> : null}
@@ -38,5 +37,3 @@ function App() {
         </div>
     );
 }
-
-export default App;

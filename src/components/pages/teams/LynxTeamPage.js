@@ -7,12 +7,10 @@ const LynxTeamPage = () => {
     return (
         <div>
             {/*<MainNavigationModule />*/}
-            <LynxPlayerInfo />
+
             <div className="container">
                 <div className="wrapper">
-                    <h5>
-                        The <b>Lynx</b>
-                    </h5>
+                    <LynxPlayerInfo />
                 </div>
             </div>
         </div>
