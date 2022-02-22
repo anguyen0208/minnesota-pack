@@ -25,7 +25,7 @@ const LogoContainer = styled.div`
     width: 100%;
 
     img{
-        width: 55px;
+        width: 50px;
     }
 `;
 export default Logo;

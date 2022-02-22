@@ -2,6 +2,7 @@ import {Component} from "react";
 import axios from "axios";
 import styled from "styled-components";
 import {ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
+import {SectionHeader} from "../../styles/main";
 
 class LatestArticle extends Component {
 
@@ -19,10 +20,6 @@ class LatestArticle extends Component {
         }
     };
 
-    // const [isLoading,latestArticle, setLatestArticle] = useState([]);
-
-
-    // const getLatestArticle = () =>
     componentDidMount() {
         // We're using axios instead of Fetch
         axios.get(`${(this.baseContentURL)}/timberwolves/video/?count=6`, this.options)
@@ -66,7 +63,6 @@ class LatestArticle extends Component {
                     Latest from Lynx
                 </SectionHeader>
 
-
                 <ImageList
                     sx={{
                         width: 900,
@@ -108,26 +104,10 @@ class LatestArticle extends Component {
 
 const LatestArticleContainer = styled.div`
     position: relative;
-    margin: 100px 0 0 120px;
+    margin: 5% 0 0 5%;
     display: block;
 `;
-const SectionHeader = styled.h1`
-    text-decoration: none;
-    font-size: clamp(2rem, 2vw, 3vw);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    position: relative;
-    display: block;
-    margin-bottom: 20px;
-    
-    &:after {
-        content: "";
-        display: block;
-        width: 45px;
-        height: 3px;
-        background-color: #e0e721;
-        margin-top: 2px;
-    }
-`;
+
 const Hero = styled.div`
    margin: 1px auto;
    background: black;

@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     display: block;
-    background-color: ${colors.offWhite};
+    background-color: ${colors.lightGrey};
     line-height: 1;
   }
 

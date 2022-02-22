@@ -4,15 +4,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // components
 import HamburgerToggle from './components/Navigation/MainMenu/HamburgerToggle';
 import Menu from './components/Navigation/MainMenu/Menu';
+import MainFooter from "./components/FooterElement/MainFooter";
 
 //styles
 import GlobalStyle from "./styles/GlobalStyle";
+import {MainContainer} from "./styles/main";
+
 
 //pages
 import HomePage from "./components/pages/home/HomePage"
 import SchedulesPage from "./components/pages/schedules/SchedulesPage"
 import LynxTeamPage from "./components/pages/teams/LynxTeamPage"
 import TeamsPage from "./components/pages/teams/TimberwolvesTeamPage"
+
 
 export default function App() {
     const [navToggled, setNavToggled] = useState(false);
@@ -22,7 +26,7 @@ export default function App() {
     }
 
     return (
-        <div>
+        <MainContainer>
             <GlobalStyle />
             <HamburgerToggle handleNavToggle={handleNavToggle} />
             <Router>
@@ -34,6 +38,7 @@ export default function App() {
                     <Route path='/teams/lynx' element={<LynxTeamPage />} />
                 </Routes>
             </Router>
-        </div>
+            <MainFooter/>
+        </MainContainer>
     );
 }

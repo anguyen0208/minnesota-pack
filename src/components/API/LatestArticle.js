@@ -2,6 +2,8 @@ import {Component} from "react";
 import axios from "axios";
 import styled from "styled-components";
 import {ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
+import {colors} from "../../styles/constant";
+import {SectionHeader} from "../../styles/main";
 
 class LatestArticle extends Component {
 
@@ -25,14 +27,14 @@ class LatestArticle extends Component {
     // const getLatestArticle = () =>
     componentDidMount() {
         // We're using axios instead of Fetch
-        axios.get(`${(this.baseContentURL)}/timberwolves/article/?count=6`, this.options)
+        axios.get(`${(this.baseContentURL)}/timberwolves/article/?count=4`, this.options)
             // Once we get a response, we'll map the API endpoints to our props
             .then(response =>
                 response.data.response.result.map(article => ({
                     headline: `${article.headline}`,
                     subheadline: `${article.subheadline}`,
                     url: `https://www.nba.com/${article.url}`,
-                    image: `${article.listImage.raw.url}`
+                    image: `${article.listImage.thumbnail}`,
                 }))
             )
             // Let's make sure to change the loading state to display the data
@@ -59,6 +61,7 @@ class LatestArticle extends Component {
         }
 
         const { isLoading, articles } = this.state;
+
         return (
             <LatestArticleContainer>
 
@@ -66,35 +69,37 @@ class LatestArticle extends Component {
                     The Latest
                 </SectionHeader>
 
-
                 <ImageList
                     sx={{
                         width: 900,
-                        height: 750,
-                        // Promote the list into its own layer in Chrome. This costs memory, but helps keeping high FPS.
+                        height: 550,
                         transform: 'translateZ(0)',
                     }}
-                    rowHeight={245}
+                    rowHeight={270}
                     gap={8}
                 >
                     {!isLoading ? (
                         articles.map(article => {
-                            const cols = article.featured ? 2 : 1;
-                            const rows = article.featured ? 2 : 1;
+                            const cols = article.types ? 2 : 1;
+                            const rows = article.types ? 2 : 1;
                             const {headline, subheadline, url, image} = article;
 
                             return (
-                                <Hero >
+                                <ArticleWrapper>
                                     <a href={url} rel="noopener">
                                         <ImageListItem key={headline} cols={cols} rows={rows}>
-                                            <img {...srcset(image, 250, 225, rows, cols)} src={image} alt={headline}/>
+                                            <img {...srcset(article.img, 250, 225, rows, cols)}
+                                                 src={image}
+                                                 alt={headline}
+                                            />
                                             <ImageListItemBar
                                                 title={headline}
                                                 subtitle={subheadline}
+                                                position="bottom"
                                             />
                                         </ImageListItem>
                                     </a>
-                                </Hero>
+                                </ArticleWrapper>
                             );
                         })
                     ) : (
@@ -108,33 +113,17 @@ class LatestArticle extends Component {
 
 const LatestArticleContainer = styled.div`
     position: relative;
-    margin: 100px 0 0 120px;
-    display: block;
+    margin: 100px 0 0 5%;
+    // display: block;
+    background-color: ${colors.offWhite};
 `;
-const SectionHeader = styled.h1`
-    text-decoration: none;
-    font-size: clamp(2rem, 2vw, 3vw);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    position: relative;
-    display: block;
-    margin-bottom: 20px;
-    
-    &:after {
-        content: "";
-        display: block;
-        width: 45px;
-        height: 3px;
-        background-color: #e0e721;
-        margin-top: 2px;
-    }
-`;
-const Hero = styled.div`
+
+const ArticleWrapper = styled.div`
    margin: 1px auto;
    background: black;
    overflow: hidden;
    
     a:hover {
-        transition: .2s all ease-in-out;
         opacity: 50%;
     }
 `

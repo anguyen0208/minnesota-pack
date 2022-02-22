@@ -7,7 +7,6 @@ export const colors = {
     Silver:     `#9EA2A2`,
     offWhite:   `#FAFAFA`,
     lightGrey:  `#DFDFDF`,
-    wrongRed:   `#CA0201`,
 }
 
 export const fonts = {

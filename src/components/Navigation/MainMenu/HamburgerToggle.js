@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import { FaBars } from 'react-icons/fa';
-import {colors} from "../../../styles/constant";
+import { AiOutlineMenu } from 'react-icons/ai';
+import {colors, fonts} from "../../../styles/constant";
 import Logo from './Logo';
 
 const HamburgerToggle = ({handleNavToggle}) => {
@@ -10,8 +10,8 @@ const HamburgerToggle = ({handleNavToggle}) => {
         <ToggleContainer>
             <Logo />
             <StyledToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle}>
+                <AiOutlineMenu/>
                 <span>Menu</span>
-                <FaBars />
             </StyledToggle>
         </ToggleContainer>
 
@@ -22,7 +22,7 @@ const ToggleContainer = styled.div`
     position: fixed;
     top: 0;
     left: 3%;
-    width: 155px;
+    width: 145px;
     border-color: transparent;
     background: ${colors.Navy};
     padding: .6rem .2rem .5rem .2rem;
@@ -39,7 +39,7 @@ const StyledToggle = styled.button`
     display: block;
     place-items: center;
     font-size: 1.8rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: ${fonts.inter};
     
     span{
         display: block;
