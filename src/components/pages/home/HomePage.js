@@ -12,7 +12,7 @@ const HomePage = () => {
            <div className="container">
                <div className="wrapper">
                    <h5>
-                       <LatestArticle />
+                       {/*<LatestArticle />*/}
                        {/*<Hero/>*/}
                    </h5>
                </div>

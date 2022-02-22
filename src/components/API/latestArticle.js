@@ -1,10 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-// import {Container} from "@mui/material";
-import {Container, ImageListItem, ImageListItemBar} from "@mui/material";
 import styled from "styled-components";
 import {colors} from "../../styles/constant";
-// import {Avatar, Divider, List, ListItem, ListItemText} from "@mui/material";
 
 function LatestArticle(){
     // const baseContentURL = 'https://api.nba.net/2';
@@ -34,15 +31,10 @@ function LatestArticle(){
 
     return (
         <LatestArticleContainer>
-                <ImageListItem>
-                    <a href={`https://www.nba.com${latestArticle.url}`} target="_blank"  rel="noopener noreferrer">
-                        <img src={`${latestArticle.listImage.thumbnail}`} alt={latestArticle.title}/>
-                        <ImageListItemBar
-                            title={latestArticle.title}
-                            // position="below"
-                        />
-                    </a>
-                </ImageListItem>
+            <a href={`https://www.nba.com${latestArticle.url}`} target="_blank"  rel="noopener noreferrer">
+                <img src={`${latestArticle.listImage.thumbnail}`} alt={latestArticle.title}/>
+                <h2>{latestArticle.title}</h2>
+            </a>
         </LatestArticleContainer>
     );
 }
@@ -56,5 +48,11 @@ const LatestArticleContainer = styled.div`
         color: ${colors.Blue};
         opacity:6;
     }
+    
+    img{
+        width:100%;
+    }
+    
+    
 `;
 export default LatestArticle;
