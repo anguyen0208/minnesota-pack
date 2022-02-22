@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.js": "/static/js/main.d29c5aaf.js",
+    "static/media/Inter.woff2": "/static/media/Inter.efd0766f306667b2e228.woff2",
+    "static/media/Inter-italic.woff2": "/static/media/Inter-italic.700cd5e754db5254630e.woff2",
+    "static/media/Inter-upright.woff2": "/static/media/Inter-upright.edc2b50c980b237d0eb2.woff2",
+    "static/media/GT-Super-Display-Bold-Italic.woff": "/static/media/GT-Super-Display-Bold-Italic.f069badeac9144e75703.woff",
+    "static/media/GT-Super-Display-Light-Italic.woff": "/static/media/GT-Super-Display-Light-Italic.c6aba6c2a01bbce9a8aa.woff",
+    "static/media/GT-Super-Display-Bold.woff": "/static/media/GT-Super-Display-Bold.53cb3df77ba64caf9d1d.woff",
+    "static/media/GT-Super-Display-Light.woff": "/static/media/GT-Super-Display-Light.dcc0577bbcb9e1344e3e.woff",
+    "static/media/Hunny-Straw-Sans-Outline.ttf": "/static/media/Hunny-Straw-Sans-Outline.290fc1e6f630bff4ad37.ttf",
+    "static/media/Hunny-Straw-Sans.ttf": "/static/media/Hunny-Straw-Sans.b8619c334e0e442683a9.ttf",
+    "static/media/Hunny-Straw-Sans-Outline.otf": "/static/media/Hunny-Straw-Sans-Outline.dd555b16c576dd4c6f14.otf",
+    "static/media/GT-Super-Display-Regular-Italic.woff2": "/static/media/GT-Super-Display-Regular-Italic.cce7ddf54771335ced94.woff2",
+    "static/media/GT-Super-Display-Bold-Italic.woff2": "/static/media/GT-Super-Display-Bold-Italic.26bc56ed3c4ce423d399.woff2",
+    "static/media/GT-Super-Display-Medium-Italic.woff2": "/static/media/GT-Super-Display-Medium-Italic.722dfded84e3b8c53b8e.woff2",
+    "static/media/GT-Super-Display-Light-Italic.woff2": "/static/media/GT-Super-Display-Light-Italic.6205f8bb8914070f2443.woff2",
+    "static/media/GT-Super-Display-Super-Italic.woff2": "/static/media/GT-Super-Display-Super-Italic.478da3854d9738cc4a07.woff2",
+    "static/media/GT-Super-Display-Bold.woff2": "/static/media/GT-Super-Display-Bold.35b9616c608e5c1835d4.woff2",
+    "static/media/GT-Super-Display-Regular.woff2": "/static/media/GT-Super-Display-Regular.67d0e07a4949414618d9.woff2",
+    "static/media/GT-Super-Display-Medium.woff2": "/static/media/GT-Super-Display-Medium.9a1f8c9d008229aaaa07.woff2",
+    "static/media/GT-Super-Display-Super.woff2": "/static/media/GT-Super-Display-Super.9544d04798a074cf3c86.woff2",
+    "static/media/GT-Super-Display-Light.woff2": "/static/media/GT-Super-Display-Light.ea3cdcd3856e5afbf4d0.woff2",
+    "static/media/timberLogo.svg": "/static/media/timberLogo.0529bbb366e7e3a65350ac504755a5bc.svg",
+    "static/media/Hunny-Straw-Sans.otf": "/static/media/Hunny-Straw-Sans.50250cf07cbf6bffca6a.otf",
+    "static/media/lynx-primary-logo.svg": "/static/media/lynx-primary-logo.8e5c1a3a9ba655c5563e6fef42691285.svg",
+    "index.html": "/index.html",
+    "main.d29c5aaf.js.map": "/static/js/main.d29c5aaf.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d29c5aaf.js"
+  ]
+}

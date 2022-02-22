@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "domain": "//www.nba.com"
+  },
+  "response": {
+    "count": 2,
+    "result": [
+      {
+        "syndication": [
+          {
+            "options": {
+              "metadata": [],
+              "publish": "off"
+            },
+            "type": "news",
+            "brand": "apple"
+          },
+          {
+            "options": {
+              "status": 1
+            },
+            "type": "amp",
+            "brand": "google"
+          }
+        ],
+        "pubstatus": 0,
+        "nid": "55885",
+        "taxonomy": {
+          "coaches": [],
+          "teams": [
+            {
+              "urlName": "timberwolves",
+              "city": "Minnesota",
+              "nickname": "Timberwolves",
+              "tricode": "MIN",
+              "id": "1610612750",
+              "value": "Minnesota Timberwolves"
+            },
+            {
+              "urlName": "raptors",
+              "city": "Toronto",
+              "nickname": "Raptors",
+              "tricode": "TOR",
+              "id": "1610612761",
+              "value": "Toronto Raptors"
+            }
+          ],
+          "players": [],
+          "games": [
+            {
+              "id": "0022100880",
+              "value": "20220216/TORMIN"
+            }
+          ],
+          "section": [],
+          "writer": {
+            "emailAddress": "taylor.nardinger@timberwolves.com",
+            "id": "tnardinger",
+            "title": "",
+            "value": "Taylor Nardinger"
+          }
+        },
+        "published": "2022-02-16T23:26:17-05:00",
+        "type": "article",
+        "title": "Wolves Fall To Raptors, 103-91",
+        "uuid": "c1f45a1a-b7f0-4640-a473-daf014ac75b7",
+        "listImage": {
+          "thumbnail": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg?w=756&h=504",
+          "large": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg?cw=462&ch=347&w=521&h=347&x=30&y=0",
+          "tile": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg?cw=320&ch=213&w=320&h=213&x=0&y=0",
+          "mobile": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg?cw=700&ch=500&w=750&h=500&x=25&y=0",
+          "raw": {
+            "size": {
+              "w": 4799,
+              "h": 3199
+            },
+            "focal_point": {
+              "yoffset": "50",
+              "xoffset": "50"
+            },
+            "url": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg"
+          },
+          "source": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg",
+          "portrait": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg?cw=720&ch=480&w=720&h=480&x=0&y=0",
+          "landscape": "https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1238545974.jpg?cw=1045&ch=697&w=1046&h=697&x=1&y=0"
+        },
+        "url": "/timberwolves/wolves-fall-raptors-103-91",
+        "brand": "timberwolves",
+        "headline": "Wolves Fall To Raptors, 103-91",
+        "subheadline": "By The Associated Press",
+        "changed": "2022-02-16T23:26:17-05:00",
+        "teaser": "MINNEAPOLIS (AP) — Gary Trent Jr. scored 30 points in his home state, Pascal Siakam added 17 points, eight rebounds and nine assists and the Toronto Raptors — who were without All-Star Fred VanVleet — beat the Minnesota Timberwolves 103-91 on Wednesday night. Trent went 5 for 12 from 3-point range and had 10 points in the fourth quarter to help the Raptors to their ninth win in 11 games.",
+        "apiUri": "/2/timberwolves/article/c1f45a1a-b7f0-4640-a473-daf014ac75b7"
+      },
+      {
+        "syndication": [
+          {
+            "options": {
+              "metadata": [],
+              "publish": "off"
+            },
+            "type": "news",
+            "brand": "apple"
+          },
+          {
+            "options": {
+              "status": "1"
+            },
+            "type": "amp",
+            "brand": "google"
+          }
+        ],
+        "pubstatus": "0",
+        "nid": "55862",
+        "taxonomy": {
+          "coaches": [],
+          "teams": [
+            {
+              "urlName": "timberwolves",
+              "city": "Minnesota",
+              "nickname": "Timberwolves",
+              "tricode": "MIN",
+              "id": "1610612750",
+              "value": "Minnesota Timberwolves"
+            }
+          ],
+          "players": [],
+          "freeform": [],
+          "games": [],
+          "section": [],
+          "writer": {
+            "emailAddress": "digital.media@timberwolves.com",
+            "id": "timberwolvespr",
+            "title": "<a href=\"https://twitter.com/Twolves_PR\" target=\"_blank\">Follow</a>",
+            "value": "Timberwolves PR"
+          }
+        },
+        "published": "2022-02-16T09:55:00-05:00",
+        "type": "article",
+        "title": "Timberwolves Sign Patrick Beverley to    Contract Extension ",
+        "uuid": "7be5f761-1a59-4244-86f4-517dfab4161e",
+        "listImage": {
+          "thumbnail": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg?w=756&h=504",
+          "large": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg?cw=462&ch=347&w=521&h=347&x=30&y=0",
+          "tile": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg?cw=320&ch=213&w=320&h=213&x=0&y=0",
+          "mobile": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg?cw=700&ch=500&w=750&h=500&x=25&y=0",
+          "raw": {
+            "size": {
+              "w": 1349,
+              "h": 899
+            },
+            "focal_point": {
+              "yoffset": "50",
+              "xoffset": "50"
+            },
+            "url": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg"
+          },
+          "source": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg",
+          "portrait": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg?cw=720&ch=480&w=720&h=480&x=0&y=0",
+          "landscape": "https://www.nba.com/timberwolves/sites/timberwolves/files/getty-images-1238513770.jpg?cw=1045&ch=696&w=1045&h=696&x=0&y=0"
+        },
+        "url": "/timberwolves/timberwolves-sign-patrick-beverley-contract-extension",
+        "brand": "timberwolves",
+        "headline": "Timberwolves Sign Patrick Beverley to    Contract Extension ",
+        "changed": "2022-02-16T09:56:21-05:00",
+        "teaser": "Minneapolis/St. Paul – The Minnesota Timberwolves today announced the team has signed guard Patrick Beverley to a contract extension. Per team policy, terms of the contract were not disclosed. ",
+        "apiUri": "/2/timberwolves/article/7be5f761-1a59-4244-86f4-517dfab4161e"
+      }
+    ]
+  }
+}
