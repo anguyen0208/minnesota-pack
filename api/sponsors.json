@@ -1,0 +1,76 @@
+[
+    {
+      "id": 1,
+      "name": "aura",
+      "url":"https://www.aura.com/",
+      "image": "./assets/images/sponsors/aura-logo.png"
+    },
+    {
+      "id": 2,
+      "name": "bcbs",
+      "url":"https://www.bluecrossmn.com/",
+      "image": "./assets/images/sponsors/bcbs-logo.png"
+    },
+  {
+    "id": 3,
+    "name": "federated-ins",
+    "url":"https://www.federatedinsurance.com/home",
+    "image": "./assets/images/sponsors/federated-ins-logo.png"
+  },
+  {
+    "id": 4,
+    "name": "jacklinks",
+    "url":"https://www.jacklinks.com/",
+    "image": "./assets/images/sponsors/jacklinks-logo.png"
+  },
+  {
+    "id": 5,
+    "name": "lifetime",
+    "url":"https://www.lifetime.life/",
+    "image": "./assets/images/sponsors/lifetime-logo.png"
+  },
+  {
+    "id": 6,
+    "name": "mayoclinic",
+    "url":"https://www.mayoclinic.org/",
+    "image": "./assets/images/sponsors/mayoclinic-logo.png"
+  },
+  {
+    "id": 7,
+    "name": "nike",
+    "url":"https://www.nike.com/",
+    "image": "./assets/images/sponsors/nike-logo.png"
+  },
+  {
+    "id": 8,
+    "name": "startribune",
+    "url":"https://www.startribune.com/",
+    "image": "./assets/images/sponsors/startribune-logo.png"
+  },
+  {
+    "id": 9,
+    "name": "target",
+    "url":"https://www.target.com/",
+    "image": "./assets/images/sponsors/target-logo.png"
+  },
+  {
+    "id": 10,
+    "name": "tcl",
+    "url":"https://www.tcl.com/",
+    "image": "./assets/images/sponsors/tcl-logo.png"
+  },
+  {
+    "id": 11,
+    "name": "ticasino",
+    "url":"https://www.ticasino.com/",
+    "image": "./assets/images/sponsors/ticasino-logo.png"
+  },
+  {
+    "id": 12,
+    "name": "usbank",
+    "url":"https://www.usbank.com/",
+    "image": "./assets/images/sponsors/usbank-logo.png"
+  }
+]
+
+

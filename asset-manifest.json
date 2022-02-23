@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.fc199141.js",
+    "main.js": "/static/js/main.8767bff0.js",
     "static/media/Inter.woff2": "/static/media/Inter.efd0766f306667b2e228.woff2",
     "static/media/Inter-italic.woff2": "/static/media/Inter-italic.700cd5e754db5254630e.woff2",
     "static/media/Inter-upright.woff2": "/static/media/Inter-upright.edc2b50c980b237d0eb2.woff2",
@@ -25,9 +25,9 @@
     "static/media/Hunny-Straw-Sans.otf": "/static/media/Hunny-Straw-Sans.50250cf07cbf6bffca6a.otf",
     "static/media/lynx-primary-logo.svg": "/static/media/lynx-primary-logo.8e5c1a3a9ba655c5563e6fef42691285.svg",
     "index.html": "/index.html",
-    "main.fc199141.js.map": "/static/js/main.fc199141.js.map"
+    "main.8767bff0.js.map": "/static/js/main.8767bff0.js.map"
   },
   "entrypoints": [
-    "static/js/main.fc199141.js"
+    "static/js/main.8767bff0.js"
   ]
 }
