@@ -1,20 +1,19 @@
 import React from 'react';
 import styled from "styled-components";
 import {colors} from "../../../styles/constant";
+import {NavLink} from "react-router-dom";
 
 
-const SubNavigation = () => {
+const SubNavigation = ({handleSubNavigation}) => {
     return (
+
         <SubNavigationContainer>
             <SubNavigationBar>
-                <SubNavigationBarItem className="is-parent" role="listitem">
-                    <SubNavigationBarItemSub href={`${process.env.PUBLIC_URL}/teams/timberwolves`}>Teams</SubNavigationBarItemSub>
+                <SubNavigationBarItem >
+                    <StyledLink activeclassname="active"  onClick={handleSubNavigation} to="/teams/timberwolves">Timberwolves</StyledLink>
                 </SubNavigationBarItem>
-                <SubNavigationBarItem className="in-sub-selected" role="listitem">
-                    <SubNavigationBarItemSub href={`${process.env.PUBLIC_URL}/teams/timberwolves`}>Timberwolves</SubNavigationBarItemSub>
-                </SubNavigationBarItem>
-                <SubNavigationBarItem className="in-sub-selected" role="listitem">
-                    <SubNavigationBarItemSub href={`${process.env.PUBLIC_URL}/teams/lynx`}>Lynx</SubNavigationBarItemSub>
+                <SubNavigationBarItem >
+                    <StyledLink activeclassname="active" onClick={handleSubNavigation} to="/teams/lynx">Lynx</StyledLink>
                 </SubNavigationBarItem>
             </SubNavigationBar>
         </SubNavigationContainer>
@@ -24,54 +23,28 @@ const SubNavigation = () => {
 
 const SubNavigationContainer = styled.div`
     width: 100%;
-    font-size: clamp(3rem, 4vw, 6vw);
+    font-size: clamp(2rem, 2vw, 6vw);
     font-family: Lato, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    // border: 1px solid red;
 `;
-const SubNavigationBar = styled.div`
+const SubNavigationBar = styled.ul`
     width: 100%;
-    // background-color: ${colors.Silver};
+    background-color: ${colors.offWhite};
     display: table;
     table-layout: fixed;
-    padding-left: 30px;
     box-sizing: border-box;
 `;
 
-const SubNavigationBarItem = styled.div`
+const SubNavigationBarItem = styled.li`
     display: table-cell;
-    width: 1%;
-    padding: 2px;
     text-align: center;
     vertical-align: middle;
     color: ${colors.offWhite};
-    background-color: rgba(17,24,54,.9);
+    background-color: rgba(17,24,54,.8);
     cursor: pointer;
-    
-    is-parent{
-        background-color: rgba(11,14,30,.75);
-    }
-    
-    in-sub-selected{
-        border-top: 2px solid ${colors.Green};
-        padding-top: 0;
-        position: relative;
-    
-        // a{
-        //     content: " ";
-        //     display: block;
-        //     position: absolute;
-        //     width: 30px;
-        //     height: 2px;
-        //     left: 50%;
-        //     bottom: 0;
-        //     -webkit-transform: translateX(-50%);
-        //     -ms-transform: translateX(-50%);
-        //     transform: translateX(-50%);
-        //     background-color: #e0e721;
-        // }
-    }
 `;
-const SubNavigationBarItemSub = styled.a`
+
+
+const StyledLink = styled(NavLink)`
     font-size: 1rem;
     letter-spacing: .5px;
     color: ${colors.lightGrey};
@@ -82,19 +55,11 @@ const SubNavigationBarItemSub = styled.a`
     display: block;
     line-height: 44px;
     
-    :after{
-        content: " ";
-        display: block;
-        position: absolute;
-        width: 30px;
-        height: 2px;
-        left: 50%;
-        bottom: 0;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        background-color: #e0e721;
+    &:hover {
+        transition: .2s all ease-in-out;
+        color: ${colors.Green};
     }
+
 `;
 
 export default SubNavigation;

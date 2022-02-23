@@ -66,7 +66,7 @@ const StyledMenu = styled.div`
     font-size: clamp(3rem, 4vw, 6vw);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     transition: .2s all ease-in-out;
-    border: solid 1px green;
+ 
     // @media screen and (min-width: 790px) {
     //     width: 60%;
     // }

@@ -1,7 +1,7 @@
 import React from 'react';
 import LatestArticle from "../../Articles/LatestArticle";
 import HeroArticle from "../../Articles/HeroArticle";
-import LynxLatestArticle from "../../Articles/LynxLatestArticle";
+import LatestVideo from "../../Articles/LatestVideo";
 import {Wrapper} from "../../../styles/main";
 
 
@@ -12,7 +12,7 @@ const HomePage = () => {
                    {/*<div className="wrapper">*/}
                    <HeroArticle/>
                    <LatestArticle />
-                   <LynxLatestArticle />
+                   <LatestVideo />
                    {/*</div>*/}
                </div>
            </Wrapper>

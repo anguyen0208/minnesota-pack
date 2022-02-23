@@ -1,17 +1,24 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {Avatar, Divider, List, ListItem, ListItemText} from "@mui/material";
+import {
+    Card,
+    CardActionArea,
+    CardContent,
+    CardMedia,
+    Typography
+} from "@mui/material";
+import {PlayersWrapper} from "../../styles/main";
 
 function LynxPlayerInfo(){
-const [lynxPlayer, setLynxPlayer] = useState([]);
+const [lynxPlayers, setLynxPlayer] = useState([]);
 
 
 const getLynxPlayerInfo = () => {
     axios.get('https://data.wnba.com/data/10s/v2015/json/mobile_teams/wnba/2021/teams/lynx_roster.json')
         .then((response) =>{
             console.log(response);
-            const lynxPlayers = response.data.t.pl;
-            setLynxPlayer(lynxPlayers)
+            const lynxPlayer = response.data.t.pl;
+            setLynxPlayer(lynxPlayer)
         });
 };
 
@@ -21,17 +28,28 @@ useEffect(() => {
 },  []);
 
 return (
-    <div>
-            {lynxPlayer.map((lynxPlayers) => (
-                <List key={lynxPlayers.pid}>
-                    <ListItem alignItems="flex-start">
-                        <Avatar alt={`${lynxPlayers.fn}`} src={`${process.env.PUBLIC_URL}/assets/images/teams/lynx/${lynxPlayers.pid}.png`}/>
-                        <ListItemText primary={[lynxPlayers.fn +" "+ lynxPlayers.ln]}/>
-                    </ListItem>
-                    <Divider variant="inset" component="li" />
-                </List>
-            ))}
-    </div>
+    <PlayersWrapper>
+        {lynxPlayers.map((lynxPlayer) => (
+            <Card sx={{maxWidth: 260}} key={lynxPlayer.pid}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={`${process.env.PUBLIC_URL}/assets/images/teams/lynx/${lynxPlayer.pid}.png`}
+                        alt={`${lynxPlayer.fn}`}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="subtitle1" component="div">
+                            {[lynxPlayer.fn +" "+ lynxPlayer.ln]}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Lizards are a widespread
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        ))}
+    </PlayersWrapper>
 );
 }
 

@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import axios from "axios";
-import {colors} from "../../styles/constant";
 
 function MenuFooter () {
     const [sponsors, setSponsor] = useState([]);
 
     const getSponsors = () => {
-        axios.get('./api/sponsors.json')
+        axios.get(`${process.env.PUBLIC_URL}/api/sponsors.json`)
             .then((response) =>{
                 console.log(response);
                 const sponsors = response.data;
@@ -21,38 +20,36 @@ function MenuFooter () {
     },  []);
 
         return (
-            <SponsorsContainer>
-                <SponsorWrapper>
+            <MenuSponsorsContainer>
+                <MenuSponsorWrapper>
                     {sponsors.map((sponsor) => (
-                        <EachSponsor>
+                        <MenuEachSponsor key={sponsor.id}>
                             <a href={sponsor.url} rel="noopener">
-                                    <img
-                                        alt={sponsor.name}
-                                        src={`${process.env.PUBLIC_URL}/assets/images/sponsors/${sponsor.name}-logo.png`}
-                                    />
+                                <img
+                                    alt={sponsor.name}
+                                    src={`${process.env.PUBLIC_URL}/assets/images/sponsors/${sponsor.name}-logo.png`}
+                                />
                             </a>
-                        </EachSponsor>
+                        </MenuEachSponsor>
                     ))}
-                </SponsorWrapper>
-            </SponsorsContainer>
+                </MenuSponsorWrapper>
+            </MenuSponsorsContainer>
         );
 }
 
-const SponsorsContainer = styled.div`
+const MenuSponsorsContainer = styled.div`
     width: 100%;
     height: 100px;
     padding: 75px;
-    // background-color: ${colors.Navy};
 `;
 
-const SponsorWrapper = styled.div`
+const MenuSponsorWrapper = styled.div`
    width: 100%;
    display: flex;
    grid-template-columns: 1fr;
    column-gap: 25px;
-   // row-gap: 25px;
 `
-const EachSponsor = styled.div`
+const MenuEachSponsor = styled.div`
    width: 100%;
    height: 100px;
    align-items: center;

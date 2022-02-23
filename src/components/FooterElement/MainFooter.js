@@ -7,7 +7,7 @@ function MainFooter () {
     const [sponsors, setSponsor] = useState([]);
 
     const getSponsors = () => {
-        axios.get('./api/sponsors.json')
+        axios.get(`${process.env.PUBLIC_URL}/api/sponsors.json`)
             .then((response) =>{
                 console.log(response);
                 const sponsors = response.data;
@@ -24,14 +24,12 @@ function MainFooter () {
             <SponsorsContainer>
                 <SponsorWrapper>
                     {sponsors.map((sponsor) => (
-                        <EachSponsor>
+                        <EachSponsor key={sponsor.id}>
                             <a href={sponsor.url} rel="noopener">
-                                {/*<ImageListItem key={sponsor.id}>*/}
-                                    <img
-                                        alt={sponsor.name}
-                                        src={`${process.env.PUBLIC_URL}/assets/images/sponsors/${sponsor.name}-logo.png`}
-                                    />
-                                {/*</ImageListItem>*/}
+                                <img
+                                    alt={sponsor.name}
+                                    src={`${process.env.PUBLIC_URL}/assets/images/sponsors/${sponsor.name}-logo.png`}
+                                />
                             </a>
                         </EachSponsor>
                     ))}

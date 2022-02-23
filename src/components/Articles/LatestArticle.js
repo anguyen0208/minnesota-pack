@@ -21,16 +21,13 @@ class LatestArticle extends Component {
         }
     };
 
-    // const [isLoading,latestArticle, setLatestArticle] = useState([]);
-
-
-    // const getLatestArticle = () =>
     componentDidMount() {
         // We're using axios instead of Fetch
         axios.get(`${(this.baseContentURL)}/timberwolves/article/?count=4`, this.options)
             // Once we get a response, we'll map the API endpoints to our props
             .then(response =>
                 response.data.response.result.map(article => ({
+                    nid: `${article.nid}`,
                     headline: `${article.headline}`,
                     subheadline: `${article.subheadline}`,
                     url: `https://www.nba.com/${article.url}`,
@@ -85,10 +82,10 @@ class LatestArticle extends Component {
                             const {headline, subheadline, url, image} = article;
 
                             return (
-                                <ArticleWrapper>
-                                    <a href={url} rel="noopener">
-                                        <ImageListItem key={headline} cols={cols} rows={rows}>
-                                            <img {...srcset(article.img, 250, 225, rows, cols)}
+                                <ArticleWrapper key={article.nid}>
+                                    <a href={url} rel="noopener" key={article.nid}>
+                                        <ImageListItem key={article.nid} cols={cols} rows={rows}>
+                                            <img {...srcset(image, 250, 225, rows, cols)}
                                                  src={image}
                                                  alt={headline}
                                             />

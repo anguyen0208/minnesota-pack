@@ -67,7 +67,29 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     line-height: inherit;
   }
- 
+  
+  .active{
+      border-top: 3px solid ${colors.Green};
+      background-color: ${colors.Navy};
+      position: relative;
+      
+      ::after{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        top: 100%;
+        left: 50%;
+        border-top: 20px solid ${colors.Navy};
+        width: 0;
+        height: 10;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        // transform: translateX(-50%);
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        transform: translateX(-50%);
+      }
+  }
 `;
 
 export default GlobalStyle;

@@ -16,19 +16,25 @@ import HomePage from "./components/Pages/home/HomePage"
 import SchedulesPage from "./components/Pages/schedules/SchedulesPage"
 import LynxTeamPage from "./components/Pages/teams/LynxTeamPage"
 import TeamsPage from "./components/Pages/teams/TimberwolvesTeamPage"
+// import SubNavigation from "./components/Navigation/SubNavigation/SubNavigation";
 
 
 export default function App() {
     const [navToggled, setNavToggled] = useState(false);
+    // const [subNavigation, setSubNavigation] = useState(true);
 
     const handleNavToggle = () => {
         setNavToggled(!navToggled);
     }
 
+    // const handleSubNavigation = () => {
+    //     setSubNavigation(subNavigation);
+    // }
+
     return (
         <MainContainer>
             <GlobalStyle />
-            <DecorativeBar/>
+            <DecorativeBar />
             <HamburgerToggle handleNavToggle={handleNavToggle} />
             <Router>
                 {navToggled ? <Menu handleNavToggle={handleNavToggle} /> : null}
