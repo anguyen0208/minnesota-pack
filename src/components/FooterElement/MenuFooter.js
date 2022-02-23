@@ -3,7 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 import {colors} from "../../styles/constant";
 
-function MainFooter () {
+function MenuFooter () {
     const [sponsors, setSponsor] = useState([]);
 
     const getSponsors = () => {
@@ -26,12 +26,10 @@ function MainFooter () {
                     {sponsors.map((sponsor) => (
                         <EachSponsor>
                             <a href={sponsor.url} rel="noopener">
-                                {/*<ImageListItem key={sponsor.id}>*/}
                                     <img
                                         alt={sponsor.name}
                                         src={`${process.env.PUBLIC_URL}/assets/images/sponsors/${sponsor.name}-logo.png`}
                                     />
-                                {/*</ImageListItem>*/}
                             </a>
                         </EachSponsor>
                     ))}
@@ -42,17 +40,17 @@ function MainFooter () {
 
 const SponsorsContainer = styled.div`
     width: 100%;
-    height: 350px;
-    padding: 75px 100px;
-    background-color: ${colors.Navy};
+    height: 100px;
+    padding: 75px;
+    // background-color: ${colors.Navy};
 `;
 
 const SponsorWrapper = styled.div`
    width: 100%;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   display: flex;
+   grid-template-columns: 1fr;
    column-gap: 25px;
-   row-gap: 25px;
+   // row-gap: 25px;
 `
 const EachSponsor = styled.div`
    width: 100%;
@@ -66,7 +64,7 @@ const EachSponsor = styled.div`
    img{
        vertical-align: middle;
        horizontal-align: middle;
-       width: 80%;
+       width: 100%;
    }
 `
-export default MainFooter;
+export default MenuFooter;

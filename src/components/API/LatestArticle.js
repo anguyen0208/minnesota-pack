@@ -80,8 +80,8 @@ class LatestArticle extends Component {
                 >
                     {!isLoading ? (
                         articles.map(article => {
-                            const cols = article.types ? 2 : 1;
-                            const rows = article.types ? 2 : 1;
+                            const cols = article.img ? 2 : 1;
+                            const rows = article.img ? 2 : 1;
                             const {headline, subheadline, url, image} = article;
 
                             return (

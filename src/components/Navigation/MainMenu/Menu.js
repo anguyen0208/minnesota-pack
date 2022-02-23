@@ -5,20 +5,28 @@ import styled from "styled-components";
 import {colors} from "../../../styles/constant";
 
 import Logo from "./Logo";
+import MenuFooter from "../../FooterElement/MenuFooter";
 
 
 const Menu = ({handleNavToggle}) => {
     return (
         <MenuContainer>
+
+            <MenuLogoContainer className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/">
+                <Logo/>
+            </MenuLogoContainer>
+
             <StyledMenu>
-                <MenuLogoContainer className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/">
-                    <Logo/>
-                </MenuLogoContainer>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/schedules">SCHEDULES</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/teams/timberwolves">TEAMS</StyledLink>
-                <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/teams/lynx"> Lynx Teams Page</StyledLink>
+                <a className="animate__animated animate__fadeInRight" href="https://www.targetcenter.com/" target='_blank' rel="noopener noreferrer">TARGET CENTER</a>
                 <CloseToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle}><FaTimes/></CloseToggle>
             </StyledMenu>
+
+            <MenuFooterContainer>
+                <MenuFooter />
+            </MenuFooterContainer>
+
         </MenuContainer>
 
     )
@@ -48,12 +56,17 @@ const MenuLogoContainer = styled.div`
         width: 100px;
     }
 `;
+
 const StyledMenu = styled.div`
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
     width: 100%;
+    padding: 0 0 0 25%;
+    color: ${colors.offWhite};
+    text-decoration: none;
+    font-size: clamp(3rem, 4vw, 6vw);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: .2s all ease-in-out;
+    border: solid 1px green;
     // @media screen and (min-width: 790px) {
     //     width: 60%;
     // }
@@ -65,21 +78,23 @@ const StyledMenu = styled.div`
 
 const StyledLink = styled(Link)`
     color: ${colors.offWhite};
-    margin-left: 25%;
-    padding-bottom: 2%;
+    margin-bottom: 2%;
     text-decoration: none;
     font-size: clamp(3rem, 4vw, 6vw);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     transition: .2s all ease-in-out;
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
+    
     &:hover {
         transition: .2s all ease-in-out;
         color: ${colors.Green};
     }
+`;
+
+const MenuFooterContainer = styled.div`
+    position: fixed;
+    bottom: 0;
+    // display: flex;
+    border: solid 1px blue;
 `;
 
 const CloseToggle = styled.button`

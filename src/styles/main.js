@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
     display: flex;
     width: 80%;
     margin: 0 10% 0 10%;
+    padding: 0 0 5% 0;
     background-color: ${colors.offWhite};
 `;
 
