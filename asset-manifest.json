@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.8767bff0.js",
+    "main.js": "/static/js/main.9c7f826d.js",
     "static/media/Inter.woff2": "/static/media/Inter.efd0766f306667b2e228.woff2",
     "static/media/Inter-italic.woff2": "/static/media/Inter-italic.700cd5e754db5254630e.woff2",
     "static/media/Inter-upright.woff2": "/static/media/Inter-upright.edc2b50c980b237d0eb2.woff2",
@@ -21,13 +21,13 @@
     "static/media/GT-Super-Display-Medium.woff2": "/static/media/GT-Super-Display-Medium.9a1f8c9d008229aaaa07.woff2",
     "static/media/GT-Super-Display-Super.woff2": "/static/media/GT-Super-Display-Super.9544d04798a074cf3c86.woff2",
     "static/media/GT-Super-Display-Light.woff2": "/static/media/GT-Super-Display-Light.ea3cdcd3856e5afbf4d0.woff2",
-    "static/media/timberLogo.svg": "/static/media/timberLogo.0529bbb366e7e3a65350ac504755a5bc.svg",
+    "static/media/timberLogo.svg": "/static/media/timberLogo.79f34dba04031ce8cb7bfd40b7b4efad.svg",
     "static/media/Hunny-Straw-Sans.otf": "/static/media/Hunny-Straw-Sans.50250cf07cbf6bffca6a.otf",
-    "static/media/lynx-primary-logo.svg": "/static/media/lynx-primary-logo.8e5c1a3a9ba655c5563e6fef42691285.svg",
+    "static/media/lynx-logo.svg": "/static/media/lynx-logo.f3b69e13125a1f69d1eaced61f1152f2.svg",
     "index.html": "/index.html",
-    "main.8767bff0.js.map": "/static/js/main.8767bff0.js.map"
+    "main.9c7f826d.js.map": "/static/js/main.9c7f826d.js.map"
   },
   "entrypoints": [
-    "static/js/main.8767bff0.js"
+    "static/js/main.9c7f826d.js"
   ]
 }
