@@ -3,6 +3,7 @@ import { css } from 'styled-components'
 export const colors = {
     Green:      `#7AC142`,
     Navy:       `#0C2340`,
+    Navy1:       `#112e52`,
     Blue:       `#236192`,
     Silver:     `#9EA2A2`,
     offWhite:   `#FAFAFA`,

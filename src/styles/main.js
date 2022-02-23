@@ -6,9 +6,14 @@ export const MainContainer = styled.div`
     width: 100%;
     background-color: ${colors.lightGrey};
 `;
+export const DecorativeBar = styled.div`
+    width: 100%;
+    height: 30px;
+    background-color: ${colors.Navy1};
+`;
 
 export const Wrapper = styled.div`
-    display: flex;
+    display: block;
     width: 80%;
     margin: 0 10% 0 10%;
     padding: 0 0 5% 0;

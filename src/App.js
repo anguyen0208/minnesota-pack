@@ -8,14 +8,14 @@ import MainFooter from "./components/FooterElement/MainFooter";
 
 //styles
 import GlobalStyle from "./styles/GlobalStyle";
-import {MainContainer} from "./styles/main";
+import {DecorativeBar, MainContainer} from "./styles/main";
 
 
 //pages
-import HomePage from "./components/pages/home/HomePage"
-import SchedulesPage from "./components/pages/schedules/SchedulesPage"
-import LynxTeamPage from "./components/pages/teams/LynxTeamPage"
-import TeamsPage from "./components/pages/teams/TimberwolvesTeamPage"
+import HomePage from "./components/Pages/home/HomePage"
+import SchedulesPage from "./components/Pages/schedules/SchedulesPage"
+import LynxTeamPage from "./components/Pages/teams/LynxTeamPage"
+import TeamsPage from "./components/Pages/teams/TimberwolvesTeamPage"
 
 
 export default function App() {
@@ -28,6 +28,7 @@ export default function App() {
     return (
         <MainContainer>
             <GlobalStyle />
+            <DecorativeBar/>
             <HamburgerToggle handleNavToggle={handleNavToggle} />
             <Router>
                 {navToggled ? <Menu handleNavToggle={handleNavToggle} /> : null}

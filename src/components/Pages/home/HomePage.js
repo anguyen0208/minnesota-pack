@@ -1,13 +1,12 @@
 import React from 'react';
-import LatestArticle from "../../API/LatestArticle";
-import HeroArticle from "../../API/HeroArticle";
-import LynxLatestArticle from "../../API/LynxLatestArticle";
+import LatestArticle from "../../Articles/LatestArticle";
+import HeroArticle from "../../Articles/HeroArticle";
+import LynxLatestArticle from "../../Articles/LynxLatestArticle";
 import {Wrapper} from "../../../styles/main";
 
 
 const HomePage = () => {
     return (
-       // <MainContainer>
            <Wrapper>
                <div className="container">
                    {/*<div className="wrapper">*/}
@@ -17,7 +16,6 @@ const HomePage = () => {
                    {/*</div>*/}
                </div>
            </Wrapper>
-       // </MainContainer>
     );
 };
 

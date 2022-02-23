@@ -1,29 +1,29 @@
 import { css } from 'styled-components';
 
-import GTLightWoff from './../assets/media/fonts/gt-super/GT-Super-Display-Light.woff';
-import GTLightWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Light.woff2';
-import GTRegularWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Regular.woff2';
-import GTMediumWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Medium.woff2';
-import GTBoldWoff from './../assets/media/fonts/gt-super/GT-Super-Display-Bold.woff';
-import GTBoldWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Bold.woff2';
-import GTSuperWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Super.woff2';
+import GTLightWoff from './media/fonts/gt-super/GT-Super-Display-Light.woff';
+import GTLightWoff2 from './media/fonts/gt-super/GT-Super-Display-Light.woff2';
+import GTRegularWoff2 from './media/fonts/gt-super/GT-Super-Display-Regular.woff2';
+import GTMediumWoff2 from './media/fonts/gt-super/GT-Super-Display-Medium.woff2';
+import GTBoldWoff from './media/fonts/gt-super/GT-Super-Display-Bold.woff';
+import GTBoldWoff2 from './media/fonts/gt-super/GT-Super-Display-Bold.woff2';
+import GTSuperWoff2 from './media/fonts/gt-super/GT-Super-Display-Super.woff2';
 
-import GTLightItalicWoff from './../assets/media/fonts/gt-super/GT-Super-Display-Light-Italic.woff';
-import GTLightItalicWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Light-Italic.woff2';
-import GTRegularItalicWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Regular-Italic.woff2';
-import GTMediumItalicWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Medium-Italic.woff2';
-import GTBoldItalicWoff from './../assets/media/fonts/gt-super/GT-Super-Display-Bold-Italic.woff';
-import GTBoldItalicWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Bold-Italic.woff2';
-import GTSuperItalicWoff2 from './../assets/media/fonts/gt-super/GT-Super-Display-Super-Italic.woff2';
+import GTLightItalicWoff from './media/fonts/gt-super/GT-Super-Display-Light-Italic.woff';
+import GTLightItalicWoff2 from './media/fonts/gt-super/GT-Super-Display-Light-Italic.woff2';
+import GTRegularItalicWoff2 from './media/fonts/gt-super/GT-Super-Display-Regular-Italic.woff2';
+import GTMediumItalicWoff2 from './media/fonts/gt-super/GT-Super-Display-Medium-Italic.woff2';
+import GTBoldItalicWoff from './media/fonts/gt-super/GT-Super-Display-Bold-Italic.woff';
+import GTBoldItalicWoff2 from './media/fonts/gt-super/GT-Super-Display-Bold-Italic.woff2';
+import GTSuperItalicWoff2 from './media/fonts/gt-super/GT-Super-Display-Super-Italic.woff2';
 
-import Inter from './../assets/media/fonts/inter/Inter.woff2';
-import InterUpright from './../assets/media/fonts/inter/Inter-upright.woff2';
-import InterItalic from './../assets/media/fonts/inter/Inter-italic.woff2';
+import Inter from './media/fonts/inter/Inter.woff2';
+import InterUpright from './media/fonts/inter/Inter-upright.woff2';
+import InterItalic from './media/fonts/inter/Inter-italic.woff2';
 
-import HunnyStraw from './../assets/media/fonts/Hunny-Staws/Hunny-Straw-Sans.otf';
-import HunnyStrawTTf from './../assets/media/fonts/Hunny-Staws/Hunny-Straw-Sans.ttf';
-import HunnyStrawOutline from './../assets/media/fonts/Hunny-Staws/Hunny-Straw-Sans-Outline.otf';
-import HunnyStrawOutlineTTf from './../assets/media/fonts/Hunny-Staws/Hunny-Straw-Sans-Outline.ttf';
+import HunnyStraw from './media/fonts/Hunny-Staws/Hunny-Straw-Sans.otf';
+import HunnyStrawTTf from './media/fonts/Hunny-Staws/Hunny-Straw-Sans.ttf';
+import HunnyStrawOutline from './media/fonts/Hunny-Staws/Hunny-Straw-Sans-Outline.otf';
+import HunnyStrawOutlineTTf from './media/fonts/Hunny-Staws/Hunny-Straw-Sans-Outline.ttf';
 
 const gtNormalWeights = {
   200: [GTLightWoff, GTLightWoff2],

@@ -93,8 +93,7 @@ const StyledLink = styled(Link)`
 const MenuFooterContainer = styled.div`
     position: fixed;
     bottom: 0;
-    // display: flex;
-    border: solid 1px blue;
+    display: flex;
 `;
 
 const CloseToggle = styled.button`

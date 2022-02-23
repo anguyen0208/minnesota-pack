@@ -1,8 +1,20 @@
-# Getting Started with Create React App
+# Minnesota Pack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Design and implement a game-day feature or page that YOU think our fans would want to check out or interact with while we play.
 
-## Available Scripts
+**Tools & API:**
+- You can implement any of these content feeds and APIs. Documentation is included.
+  
+  - The NBA's Mobile Feed
+  - Timberwolves Content API
+  - Timberwolves Content RSS
+
+**Tips & Guidelines**
+
+- You can use any framework/tech stack you feel comfortable with.
+- Ideally you would use the provided APIs to pull data to build out your UI.
+
+## Tools & API:
 
 In the project directory, you can run:
 

@@ -47,6 +47,9 @@ const GlobalStyle = createGlobalStyle`
     display: block;
     background-color: ${colors.lightGrey};
     line-height: 1;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
   }
 
   a {
@@ -56,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
     
     :hover{
       color: ${colors.Green};
+      text-decoration: none;
     }
   }
   
@@ -63,15 +67,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     line-height: inherit;
   }
-  
-  ::selection {
-    color: ${colors.Navy};
-    background: transparent;
-  }
-  
-  ::-webkit-scrollbar {
-    display: none;
-  }
+ 
 `;
 
 export default GlobalStyle;

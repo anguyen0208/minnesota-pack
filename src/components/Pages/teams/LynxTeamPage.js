@@ -1,19 +1,18 @@
 import React from 'react';
 // import MainNavigationModule from "../../Navigation/MainNavigation/MainNavigation";
-import LynxPlayerInfo from "../../API/playerLynx";
+import LynxPlayerInfo from "../../Players/playerLynx";
+import SubNavigation from "../../Navigation/SubNavigation/SubNavigation";
+import {Wrapper} from "../../../styles/main";
 // import MetaTags from 'react-meta-tags';
 
 const LynxTeamPage = () => {
     return (
-        <div>
-            {/*<MainNavigationModule />*/}
-
+        <Wrapper>
+            <SubNavigation />
             <div className="container">
-                <div className="wrapper">
-                    <LynxPlayerInfo />
-                </div>
+                <LynxPlayerInfo />
             </div>
-        </div>
+        </Wrapper>
     );
 };
 
