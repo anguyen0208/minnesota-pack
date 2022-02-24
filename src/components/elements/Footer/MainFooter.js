@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import axios from "axios";
-import {colors} from "../../styles/constant";
+import {colors} from "../../../styles/constant";
 
 function MainFooter () {
     const [sponsors, setSponsor] = useState([]);

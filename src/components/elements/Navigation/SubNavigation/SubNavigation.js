@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
-import {colors} from "../../../styles/constant";
+import {colors} from "../../../../styles/constant";
 import {NavLink} from "react-router-dom";
 
 
 const SubNavigation = ({handleSubNavigation}) => {
+
     return (
 
         <SubNavigationContainer>
             <SubNavigationBar>
                 <SubNavigationBarItem >
-                    <StyledLink activeclassname="active"  onClick={handleSubNavigation} to="/teams/timberwolves">Timberwolves</StyledLink>
+                    <StyledLink activeclassname="active"  onClick={handleSubNavigation} to='/teams/timberwolves'>Timberwolves</StyledLink>
                 </SubNavigationBarItem>
                 <SubNavigationBarItem >
-                    <StyledLink activeclassname="active" onClick={handleSubNavigation} to="/teams/lynx">Lynx</StyledLink>
+                    <StyledLink activeclassname="active" onClick={handleSubNavigation} to='/teams/lynx'>Lynx</StyledLink>
                 </SubNavigationBarItem>
             </SubNavigationBar>
         </SubNavigationContainer>

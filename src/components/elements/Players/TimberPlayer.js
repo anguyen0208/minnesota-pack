@@ -4,7 +4,7 @@ import axios from "axios";
 import {
     BottomInfoContainer, GenInfoContainer, PlayerInfoPos, PlayerNumber,
     PlayersWrapper, TopInfoContainer, TopLeftInfoContainer
-} from "../../styles/main";
+} from "../../../styles/main";
 import {Card, CardActionArea, CardContent, CardMedia, Divider, Typography} from "@mui/material";
 
 function PlayerInfo(){

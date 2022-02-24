@@ -40,7 +40,7 @@ function MenuFooter () {
 const MenuSponsorsContainer = styled.div`
     width: 100%;
     height: 100px;
-    padding: 75px;
+    padding: 0 75px 0 75px;
 `;
 
 const MenuSponsorWrapper = styled.div`

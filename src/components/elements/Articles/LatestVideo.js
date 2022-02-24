@@ -10,7 +10,7 @@ import {
     ImageListItem,
     Typography
 } from "@mui/material";
-import {SectionHeader} from "../../styles/main";
+import {SectionHeader} from "../../../styles/main";
 
 class LatestVideo extends Component {
 

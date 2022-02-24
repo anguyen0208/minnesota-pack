@@ -2,8 +2,8 @@ import {Component} from "react";
 import axios from "axios";
 import styled from "styled-components";
 import {ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
-import {colors} from "../../styles/constant";
-import {SectionHeader} from "../../styles/main";
+import {colors} from "../../../styles/constant";
+import {SectionHeader} from "../../../styles/main";
 
 class LatestArticle extends Component {
 

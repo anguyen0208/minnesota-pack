@@ -115,3 +115,33 @@ export const GenInfoContainer = styled.div`
     display: block;
 `;
 
+//MATCHES
+export const MatchesWrapper = styled.div`
+    display: block;
+    width: 100%;
+    padding: 2% ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
+`;
+export const GameStadium = styled.div`
+    display: block;
+    padding-bottom: 5px;
+    text-align: center;
+    justify-content: space-between;
+    color:${colors.Silver};
+`;
+
+export const StadiumCity = styled.div`
+    margin-top: -10px;
+    color:${colors.Silver};
+`;
+
+
+export const Teams = styled.div`
+    font-size: 5rem;
+    color:${colors.Blue};
+    text-transform: uppercase;
+    padding-top: 7px;
+`;

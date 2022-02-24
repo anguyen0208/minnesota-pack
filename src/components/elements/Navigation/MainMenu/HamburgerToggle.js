@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 import { AiOutlineMenu } from 'react-icons/ai';
-import {colors, fonts} from "../../../styles/constant";
+import {colors, fonts} from "../../../../styles/constant";
 import Logo from './Logo';
 
 const HamburgerToggle = ({handleNavToggle}) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container } from 'react-bootstrap';
-import LynxLogo from '../../../assets/images/logo/lynx-logo.svg'
-import TimberLogo from '../../../assets/images/logo/timberLogo.svg'
+import LynxLogo from '../../../../assets/images/logo/lynx-logo.svg'
+import TimberLogo from '../../../../assets/images/logo/timberLogo.svg'
 import styled from "styled-components";
 
 function Logo() {

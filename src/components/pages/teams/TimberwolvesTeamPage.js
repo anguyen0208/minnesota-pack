@@ -1,7 +1,7 @@
 import React from 'react';
 // import MainNavigationModule from "../../Navigation/MainNavigation/MainNavigation";
-import PlayerInfo from "../../Players/player";
-import SubNavigation from "../../Navigation/SubNavigation/SubNavigation";
+import PlayerInfo from "../../elements/Players/TimberPlayer";
+import SubNavigation from "../../elements/Navigation/SubNavigation/SubNavigation";
 import {PageTitle, PageTitleWrapper, PlayersContainer, Wrapper} from "../../../styles/main";
 
 const TimberwolvesTeamPage = () => {
@@ -15,10 +15,7 @@ const TimberwolvesTeamPage = () => {
            <SubNavigation />
 
            <PlayersContainer>
-
-                   <PlayerInfo/>
-
-
+               <PlayerInfo/>
            </PlayersContainer>
        </Wrapper>
     )

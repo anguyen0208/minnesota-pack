@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LynxPlayerInfo from "../../Players/playerLynx";
-import SubNavigation from "../../Navigation/SubNavigation/SubNavigation";
+import LynxPlayerInfo from "../../elements/Players/LynxPlayer";
+import SubNavigation from "../../elements/Navigation/SubNavigation/SubNavigation";
 import {PageTitle, PageTitleWrapper, PlayersContainer, Wrapper} from "../../../styles/main";
 
 

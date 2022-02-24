@@ -2,10 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa';
 import styled from "styled-components";
-import {colors} from "../../../styles/constant";
+import {colors} from "../../../../styles/constant";
 
 import Logo from "./Logo";
-import MenuFooter from "../../FooterElement/MenuFooter";
+import MenuFooter from "../../Footer/MenuFooter";
 
 
 const Menu = ({handleNavToggle}) => {
@@ -17,7 +17,7 @@ const Menu = ({handleNavToggle}) => {
             </MenuLogoContainer>
 
             <StyledMenu>
-                <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/schedules">SCHEDULES</StyledLink>
+                <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/schedules/timberwolves">SCHEDULES</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/teams/timberwolves">TEAMS</StyledLink>
                 <a className="animate__animated animate__fadeInRight" href="https://www.targetcenter.com/" target='_blank' rel="noopener noreferrer">TARGET CENTER</a>
                 <CloseToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle}><FaTimes/></CloseToggle>
@@ -63,7 +63,7 @@ const StyledMenu = styled.div`
     padding: 0 0 0 25%;
     color: ${colors.offWhite};
     text-decoration: none;
-    font-size: clamp(3rem, 4vw, 6vw);
+    font-size: clamp(4rem, 4vw, 6vw);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     transition: .2s all ease-in-out;
  
@@ -78,9 +78,9 @@ const StyledMenu = styled.div`
 
 const StyledLink = styled(Link)`
     color: ${colors.offWhite};
-    margin-bottom: 2%;
+    margin-bottom: 4%;
     text-decoration: none;
-    font-size: clamp(3rem, 4vw, 6vw);
+    font-size: clamp(4rem, 4vw, 6vw);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     transition: .2s all ease-in-out;
     

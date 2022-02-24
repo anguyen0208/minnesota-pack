@@ -14,7 +14,7 @@ import {
     PlayersWrapper,
     TopInfoContainer,
     TopLeftInfoContainer
-} from "../../styles/main";
+} from "../../../styles/main";
 
 function LynxPlayerInfo(){
 const [lynxPlayers, setLynxPlayer] = useState([]);
