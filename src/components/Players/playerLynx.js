@@ -4,10 +4,17 @@ import {
     Card,
     CardActionArea,
     CardContent,
-    CardMedia,
+    CardMedia, Divider,
     Typography
 } from "@mui/material";
-import {PlayersWrapper} from "../../styles/main";
+import {
+    BottomInfoContainer, GenInfoContainer,
+    PlayerInfoPos,
+    PlayerNumber,
+    PlayersWrapper,
+    TopInfoContainer,
+    TopLeftInfoContainer
+} from "../../styles/main";
 
 function LynxPlayerInfo(){
 const [lynxPlayers, setLynxPlayer] = useState([]);
@@ -30,7 +37,7 @@ useEffect(() => {
 return (
     <PlayersWrapper>
         {lynxPlayers.map((lynxPlayer) => (
-            <Card sx={{maxWidth: 260}} key={lynxPlayer.pid}>
+            <Card sx={{maxWidth: 300}} key={lynxPlayer.pid}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -39,12 +46,70 @@ return (
                         alt={`${lynxPlayer.fn}`}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="subtitle1" component="div">
-                            {[lynxPlayer.fn +" "+ lynxPlayer.ln]}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Lizards are a widespread
-                        </Typography>
+                        {/*<-------------- Top Player Information --------------*/}
+                        <TopInfoContainer>
+                            {/*<-------------- Left-side: Player Name ---------------->*/}
+                            <TopLeftInfoContainer>
+                                <Typography gutterBottom variant="button" component="div">
+                                    {[lynxPlayer.fn +" "+ lynxPlayer.ln]}
+                                </Typography>
+                                {/*<-------------- Left-side: Position ---------------->*/}
+                                <PlayerInfoPos>
+                                    <Typography variant="caption" color="text.secondary">
+                                        {lynxPlayer.hcc}
+                                    </Typography>
+                                    <Typography variant="h6" >
+                                        {lynxPlayer.pos}
+                                    </Typography>
+                                </PlayerInfoPos>
+                            </TopLeftInfoContainer>
+                            {/*Player Number*/}
+                            <PlayerNumber>
+                                <Typography gutterBottom variant="h3" component="div">
+                                    {lynxPlayer.num}
+                                </Typography>
+                            </PlayerNumber>
+                        </TopInfoContainer>
+
+                        <Divider/>
+
+                        {/*<-------------- Bottom Player Information --------------*/}
+                        <BottomInfoContainer>
+
+                            {/*Height*/}
+                            <GenInfoContainer>
+                                <Typography variant="caption" color="text.secondary">
+                                    Height
+                                </Typography>
+                                <Typography variant="h6" color="text.secondary">
+                                    {lynxPlayer.ht}
+                                </Typography>
+                            </GenInfoContainer>
+
+                            <Divider orientation="vertical" variant="middle" flexItem />
+
+                            {/*Weight*/}
+                            <GenInfoContainer>
+                                <Typography variant="caption" color="text.secondary">
+                                    Weight
+                                </Typography>
+                                <Typography variant="h6" color="text.secondary">
+                                    {lynxPlayer.wt}
+                                </Typography>
+                            </GenInfoContainer>
+
+                            <Divider orientation="vertical" variant="middle" flexItem />
+
+                            {/*Year*/}
+                            <GenInfoContainer>
+                                <Typography variant="caption" color="text.secondary">
+                                    Year
+                                </Typography>
+                                <Typography variant="h6" color="text.secondary">
+                                    {lynxPlayer.y}
+                                </Typography>
+                            </GenInfoContainer>
+                        </BottomInfoContainer>
                     </CardContent>
                 </CardActionArea>
             </Card>

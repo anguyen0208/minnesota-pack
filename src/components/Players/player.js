@@ -1,8 +1,11 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 // import {Avatar, Divider, List, ListItem, ListItemText} from "@mui/material";
-import {PlayersWrapper} from "../../styles/main";
-import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
+import {
+    BottomInfoContainer, GenInfoContainer, PlayerInfoPos, PlayerNumber,
+    PlayersWrapper, TopInfoContainer, TopLeftInfoContainer
+} from "../../styles/main";
+import {Card, CardActionArea, CardContent, CardMedia, Divider, Typography} from "@mui/material";
 
 function PlayerInfo(){
 const [timberPlayers, setTimberPlayer] = useState([]);
@@ -24,7 +27,7 @@ useEffect(() => {
 return (
         <PlayersWrapper>
             {timberPlayers.map((timberPlayer) => (
-                <Card sx={{maxWidth: 260}} key={timberPlayer.pid}>
+                <Card sx={{maxWidth: 300}} key={timberPlayer.pid}>
                     <CardActionArea>
                         <CardMedia
                             component="img"
@@ -33,12 +36,70 @@ return (
                             alt={`${timberPlayer.fn}`}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="subtitle1" component="div">
-                                {[timberPlayer.fn +" "+ timberPlayer.ln]}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread
-                            </Typography>
+                            {/*<-------------- Top Player Information --------------*/}
+                            <TopInfoContainer>
+                                {/*<-------------- Left-side: Player Name ---------------->*/}
+                                <TopLeftInfoContainer>
+                                    <Typography gutterBottom variant="button" component="div">
+                                        {[timberPlayer.fn +" "+ timberPlayer.ln]}
+                                    </Typography>
+                                    {/*<-------------- Left-side: Position ---------------->*/}
+                                    <PlayerInfoPos>
+                                        <Typography variant="caption" color="text.secondary">
+                                            {timberPlayer.hcc}
+                                        </Typography>
+                                        <Typography variant="h6" >
+                                            {timberPlayer.pos}
+                                        </Typography>
+                                    </PlayerInfoPos>
+                                </TopLeftInfoContainer>
+                                {/*Player Number*/}
+                                <PlayerNumber>
+                                    <Typography gutterBottom variant="h3" component="div">
+                                        {timberPlayer.num}
+                                    </Typography>
+                                </PlayerNumber>
+                            </TopInfoContainer>
+
+                            <Divider/>
+
+                            {/*<-------------- Bottom Player Information --------------*/}
+                            <BottomInfoContainer>
+
+                                {/*Height*/}
+                                <GenInfoContainer>
+                                    <Typography variant="caption" color="text.secondary">
+                                        Height
+                                    </Typography>
+                                    <Typography variant="h6" color="text.secondary">
+                                        {timberPlayer.ht}
+                                    </Typography>
+                                </GenInfoContainer>
+
+                                <Divider orientation="vertical" variant="middle" flexItem />
+
+                                {/*Weight*/}
+                               <GenInfoContainer>
+                                   <Typography variant="caption" color="text.secondary">
+                                       Weight
+                                   </Typography>
+                                   <Typography variant="h6" color="text.secondary">
+                                       {timberPlayer.wt}
+                                   </Typography>
+                               </GenInfoContainer>
+
+                                <Divider orientation="vertical" variant="middle" flexItem />
+
+                                {/*Year*/}
+                                <GenInfoContainer>
+                                    <Typography variant="caption" color="text.secondary">
+                                        Year
+                                    </Typography>
+                                    <Typography variant="h6" color="text.secondary">
+                                        {timberPlayer.y}
+                                    </Typography>
+                                </GenInfoContainer>
+                            </BottomInfoContainer>
                         </CardContent>
                     </CardActionArea>
                 </Card>

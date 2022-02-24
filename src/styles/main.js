@@ -67,17 +67,51 @@ export const SectionHeader = styled.h1`
 export const PlayersContainer = styled.div`
     text-decoration: none;
     display: block;
-    padding: 35px 35px 0 35px;
+    padding: 35px 65px 0 65px;
 `;
 
 export const PlayersWrapper = styled.div`
     display: block;
     width: 100%;
-    // margin: 0 10% 0 10%;
-    padding: 5% 0 5% 0;
+    padding: 2% ;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 25px;
     row-gap: 25px;
-    background-color: ${colors.offWhite};
 `;
+
+// TOP PLAYER INFO
+export const TopInfoContainer = styled.div`
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const TopLeftInfoContainer = styled.div`
+    display: block;
+`;
+
+export const PlayerNumber = styled.div`
+    color:${colors.Blue};
+`;
+
+export const PlayerInfoPos = styled.div`
+    margin-top: -10px;
+    color:${colors.Silver};
+`;
+
+// BOTTOM PLAYER INFO
+export const BottomInfoContainer = styled.div`
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0 0 0;
+`;
+
+export const GenInfoContainer = styled.div`
+    text-decoration: none;
+    display: block;
+`;
+
