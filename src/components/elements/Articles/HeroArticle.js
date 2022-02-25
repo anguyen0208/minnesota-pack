@@ -26,7 +26,7 @@ class HeroArticle extends Component {
             .then(response =>
                 response.data.response.result.map(article => ({
                     headline: `${article.headline}`,
-                    subheadline: `${article.subheadline}`,
+                    teaser: `${article.teaser}`,
                     url: `https://www.nba.com/${article.url}`,
                     image: `${article.listImage}`
                 }))
@@ -50,11 +50,11 @@ class HeroArticle extends Component {
                                 <Hero key={article.headline}>
                                     <a href={article.url} target="_blank" rel="noopener">
                                         <ImageListItem>
-                                            <img src={article.listImage ? article.listImage.raw.ul : `${process.env.PUBLIC_URL}/assets/images/logo/img_1.png`}
+                                            <img src={article.listImage ? article.listImage.raw.url : `${process.env.PUBLIC_URL}/assets/images/logo/img_1.png`}
                                                 alt={article.headline}/>
                                             <ImageListItemBar
                                                 title={article.headline}
-                                                subtitle={article.subheadline}
+                                                subtitle={article.teaser}
                                             />
                                         </ImageListItem>
                                     </a>
