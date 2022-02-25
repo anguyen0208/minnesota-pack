@@ -4,7 +4,7 @@ Timberwolves and Lynx Website for local and basketball fans.
 
 ### Let's go Pack!!
 
-![mn_packs](http://g.recordit.co/Md2zT2OLod.gif)
+![mn_packs](./src/assets/minnesota-pack.gif)
 
 ### API
 - You can implement any of these content feeds and APIs. Documentation is included.
