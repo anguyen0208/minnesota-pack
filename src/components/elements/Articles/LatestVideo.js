@@ -83,10 +83,6 @@ class LatestVideo extends Component {
                                                 alt={video.title}
                                             />
                                             <CardContent>
-                                                {/*<ImageListItemBar*/}
-                                                {/*    title={video.title}*/}
-                                                {/*    position="bottom"*/}
-                                                {/*/>*/}
                                                 <Typography gutterBottom variant="body1" component="div">
                                                     {video.title}
                                                 </Typography>
@@ -94,23 +90,6 @@ class LatestVideo extends Component {
                                             </CardContent>
                                         </CardActionArea>
                                     </ImageListItem>
-                                    {/*<CardActionArea>*/}
-                                    {/*    <CardMedia*/}
-                                    {/*        component="iframe"*/}
-                                    {/*        height="220"*/}
-                                    {/*        src={video.mp4}*/}
-                                    {/*        alt={video.title}*/}
-                                    {/*    />*/}
-                                    {/*    <CardContent>*/}
-                                    {/*        <ImageListItemBar*/}
-                                    {/*            title={video.title}*/}
-                                    {/*            position="bottom"*/}
-                                    {/*        />*/}
-                                    {/*    /!*<Typography gutterBottom variant="h6" component="div">*!/*/}
-                                    {/*    /!*    {video.title}*!/*/}
-                                    {/*    /!*</Typography>*!/*/}
-                                    {/*    </CardContent>*/}
-                                    {/*</CardActionArea>*/}
                                 </Card>
                             );
                         })

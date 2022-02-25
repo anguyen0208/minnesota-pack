@@ -3,14 +3,14 @@ import styled from "styled-components";
 import axios from "axios";
 
 function MenuFooter () {
-    const [sponsors, setSponsor] = useState([]);
+    const [menuSponsors, setMenuSponsor] = useState([]);
 
     const getSponsors = () => {
         axios.get(`${process.env.PUBLIC_URL}/api/sponsors.json`)
             .then((response) =>{
                 console.log(response);
                 const sponsors = response.data;
-                setSponsor(sponsors)
+                setMenuSponsor(sponsors)
             });
     };
 
@@ -22,7 +22,7 @@ function MenuFooter () {
         return (
             <MenuSponsorsContainer>
                 <MenuSponsorWrapper>
-                    {sponsors.map((sponsor) => (
+                    {menuSponsors.map((sponsor) => (
                         <MenuEachSponsor key={sponsor.id}>
                             <a href={sponsor.url} rel="noopener">
                                 <img

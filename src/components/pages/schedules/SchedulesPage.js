@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-    PageTitle, PageTitleWrapper, PlayersContainer,
-    SectionHeader,
-    Wrapper
+    PageTitle, PageTitleWrapper, PlayersContainer, Wrapper
 } from "../../../styles/main";
-import TimberMatch from "../../elements/Matches/TimberMatch";
 import SchedulesSubNavigation from "../../elements/Navigation/SubNavigation/SchedulesSubNavigation";
+import Schedule from "../../elements/Matches/Schedule";
+import {useParams} from "react-router-dom";
 
 
-const SchedulesPage = () => {
+export default function SchedulesPage() {
+    const{team} = useParams();
     return (
         <Wrapper>
             <PageTitleWrapper>
@@ -17,11 +17,10 @@ const SchedulesPage = () => {
 
             <SchedulesSubNavigation />
             <PlayersContainer>
-                <TimberMatch />
+                {team ==='lynx' && <Schedule teamName='lynx' teamLeague='wnba'/>}
+                {team ==='timberwolves' && <Schedule teamName='timberwolves' teamLeague='nba'/>}
             </PlayersContainer>
 
         </Wrapper>
     );
 };
-
-export default SchedulesPage;

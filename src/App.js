@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // components
@@ -14,13 +14,16 @@ import {DecorativeBar, MainContainer} from "./styles/main";
 //pages
 import HomePage from "./components/pages/home/HomePage"
 import SchedulesPage from "./components/pages/schedules/SchedulesPage"
-import LynxSchedulesPage from "./components/pages/schedules/LynxSchedulesPage"
-import LynxTeamPage from "./components/pages/teams/LynxTeamPage"
-import TeamsPage from "./components/pages/teams/TimberwolvesTeamPage"
+import TeamsPage from "./components/pages/teams/TeamsPage"
 
 
-export default function App() {
 
+const teams=[
+    {id: 1, teamName: 'lynx', league: 'wnba'},
+    {id: 2, teamName: 'timberwolves', league: 'nba'}
+]
+
+function App(){
     const [navToggled, setNavToggled] = useState(false);
 
     const handleNavToggle = () => {
@@ -36,13 +39,13 @@ export default function App() {
                 {navToggled ? <Menu handleNavToggle={handleNavToggle} /> : null}
                 <Routes>
                     <Route path='/' element={<HomePage />} />
-                    <Route path='/schedules/timberwolves' element={<SchedulesPage />} />
-                    <Route path='/schedules/lynx' element={<LynxSchedulesPage />} />
-                    <Route path='/teams/timberwolves' element={<TeamsPage />} />
-                    <Route path='/teams/lynx' element={<LynxTeamPage />} />
+                    <Route path='/schedules/:team' element={<SchedulesPage team={teams.teamName}/>} />
+                    <Route path={`/teams/:team`} element={<TeamsPage team={teams.teamName}/>}/>
                 </Routes>
             </Router>
             <MainFooter/>
         </MainContainer>
     );
 }
+
+export default App;

@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import axios from "axios";
 import styled from "styled-components";
 import {ImageListItem, ImageListItemBar} from "@mui/material";
@@ -19,10 +19,6 @@ class HeroArticle extends Component {
         }
     };
 
-    // const [isLoading,latestArticle, setLatestArticle] = useState([]);
-
-
-    // const getLatestArticle = () =>
     componentDidMount() {
         // We're using axios instead of Fetch
         axios.get(`${(this.baseContentURL)}/timberwolves/article/?count=1`, this.options)
@@ -32,17 +28,15 @@ class HeroArticle extends Component {
                     headline: `${article.headline}`,
                     subheadline: `${article.subheadline}`,
                     url: `https://www.nba.com/${article.url}`,
-                    image: `${article.listImage.raw.url}`
+                    image: `${article.listImage}`
                 }))
             )
-            // Let's make sure to change the loading state to display the data
             .then(articles => {
                 this.setState({
                     articles,
                     isLoading: false
                 });
             })
-            // We can still use the `.catch()` method since axios is promise-based
             .catch(error => this.setState({error, isLoading: false}));
     };
 
@@ -52,15 +46,15 @@ class HeroArticle extends Component {
             <HeroContainer>
                 {!isLoading ? (
                     articles.map(article => {
-                        const {headline, subheadline, url, image} = article;
                         return (
-                                <Hero key={headline}>
-                                    <a href={url} rel="noopener">
+                                <Hero key={article.headline}>
+                                    <a href={article.url} rel="noopener">
                                         <ImageListItem>
-                                            <img src={image} alt={headline}/>
+                                            <img src={article.listImage ? article.listImage.raw.ul : `${process.env.PUBLIC_URL}/assets/images/logo/img_1.png`}
+                                                alt={article.headline}/>
                                             <ImageListItemBar
-                                                title={headline}
-                                                subtitle={subheadline}
+                                                title={article.headline}
+                                                subtitle={article.subheadline}
                                             />
                                         </ImageListItem>
                                     </a>

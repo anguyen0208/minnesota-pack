@@ -1,39 +1,38 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-// import {Avatar, Divider, List, ListItem, ListItemText} from "@mui/material";
 import {
     BottomInfoContainer, GenInfoContainer, PlayerInfoPos, PlayerNumber,
     PlayersWrapper, TopInfoContainer, TopLeftInfoContainer
 } from "../../../styles/main";
 import {Card, CardActionArea, CardContent, CardMedia, Divider, Typography} from "@mui/material";
 
-function PlayerInfo(){
-const [timberPlayers, setTimberPlayer] = useState([]);
+export default function Player({teamName, teamLeague}){
+const [players, setPlayer] = useState([]);
 
-const getTimberPlayerInfo = () => {
-    axios.get('https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2021/teams/timberwolves_roster.json')
+const getPlayerInfo = () => {
+    axios.get(`https://data.${teamLeague}.com/data/10s/v2015/json/mobile_teams/${teamLeague}/2021/teams/${teamName}_roster.json`)
         .then((response) =>{
             console.log(response);
-            const timberPlayer = response.data.t.pl;
-            setTimberPlayer(timberPlayer)
+            const player = response.data.t.pl;
+            setPlayer(player)
         });
 };
 
 
 useEffect(() => {
-    getTimberPlayerInfo();
+    getPlayerInfo();
 },  []);
 
 return (
         <PlayersWrapper>
-            {timberPlayers.map((timberPlayer) => (
-                <Card sx={{maxWidth: 300}} key={timberPlayer.pid}>
+            {players.map((player) => (
+                <Card sx={{maxWidth: 300}} key={player.pid}>
                     <CardActionArea>
                         <CardMedia
                             component="img"
                             height="200"
-                            image={`${process.env.PUBLIC_URL}/assets/images/teams/timberwolves/${timberPlayer.pid}.png`}
-                            alt={`${timberPlayer.fn}`}
+                            image={`${process.env.PUBLIC_URL}/assets/images/teams/${teamName}/${player.pid}.png`}
+                            alt={`${player.fn}`}
                         />
                         <CardContent>
                             {/*<-------------- Top Player Information --------------*/}
@@ -41,22 +40,22 @@ return (
                                 {/*<-------------- Left-side: Player Name ---------------->*/}
                                 <TopLeftInfoContainer>
                                     <Typography gutterBottom variant="button" component="div">
-                                        {[timberPlayer.fn +" "+ timberPlayer.ln]}
+                                        {[player.fn +" "+ player.ln]}
                                     </Typography>
                                     {/*<-------------- Left-side: Position ---------------->*/}
                                     <PlayerInfoPos>
                                         <Typography variant="caption" color="text.secondary">
-                                            {timberPlayer.hcc}
+                                            {player.hcc}
                                         </Typography>
                                         <Typography variant="h6" >
-                                            {timberPlayer.pos}
+                                            {player.pos}
                                         </Typography>
                                     </PlayerInfoPos>
                                 </TopLeftInfoContainer>
                                 {/*Player Number*/}
                                 <PlayerNumber>
                                     <Typography gutterBottom variant="h3" component="div">
-                                        {timberPlayer.num}
+                                        {player.num}
                                     </Typography>
                                 </PlayerNumber>
                             </TopInfoContainer>
@@ -72,7 +71,7 @@ return (
                                         Height
                                     </Typography>
                                     <Typography variant="h6" color="text.secondary">
-                                        {timberPlayer.ht}
+                                        {player.ht}
                                     </Typography>
                                 </GenInfoContainer>
 
@@ -84,7 +83,7 @@ return (
                                        Weight
                                    </Typography>
                                    <Typography variant="h6" color="text.secondary">
-                                       {timberPlayer.wt}
+                                       {player.wt}
                                    </Typography>
                                </GenInfoContainer>
 
@@ -96,7 +95,7 @@ return (
                                         Year
                                     </Typography>
                                     <Typography variant="h6" color="text.secondary">
-                                        {timberPlayer.y}
+                                        {player.y}
                                     </Typography>
                                 </GenInfoContainer>
                             </BottomInfoContainer>
@@ -107,5 +106,3 @@ return (
         </PlayersWrapper>
     );
 }
-
-export default PlayerInfo;
