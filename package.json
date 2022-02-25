@@ -1,6 +1,13 @@
 {
-  "name": "minnesota-packs",
+  "name": "minnesota-pack",
   "version": "0.1.0",
+  "description": "Redesign Timberwolves and Lynx for Minnesota or basketball fans. Let's go PACK",
+  "author": "Anh Bernhardt",
+  "homepage": "https://minnesota-pack.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anguyen0208/minnesota-packs"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.1",

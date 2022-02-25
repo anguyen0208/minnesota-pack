@@ -9,10 +9,10 @@ const SubNavigation = ({handleSubNavigation}) => {
         <SubNavigationContainer>
             <SubNavigationBar>
                 <SubNavigationBarItem >
-                    <StyledLink activeclassname="active"  onClick={handleSubNavigation}  to='/teams/timberwolves'>Timberwolves</StyledLink>
+                    <StyledLink activeclassname="active"  onClick={handleSubNavigation}  to='/players/timberwolves'>Timberwolves</StyledLink>
                 </SubNavigationBarItem>
                 <SubNavigationBarItem >
-                    <StyledLink activeclassname="active" onClick={handleSubNavigation}   to='/teams/lynx'>Lynx</StyledLink>
+                    <StyledLink activeclassname="active" onClick={handleSubNavigation}   to='/players/lynx'>Lynx</StyledLink>
                 </SubNavigationBarItem>
             </SubNavigationBar>
         </SubNavigationContainer>

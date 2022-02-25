@@ -1,24 +1,77 @@
 # Minnesota Pack
 
-Design and implement a game-day feature or page that YOU think our fans would want to check out or interact with while we play.
+Timberwolves and Lynx Website for local and basketball fans. 
 
-**Tools & API:**
+###Let's go Pack!!
+![mn_packs](http://g.recordit.co/Md2zT2OLod.gif)
+### API
 - You can implement any of these content feeds and APIs. Documentation is included.
   
   - The NBA's Mobile Feed
-  - Timberwolves Content API
+    - [The Timberwolves 2021 roster](https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2021/teams/timberwolves_roster.json)
+    - [The Timberwolves 2021 schedule](https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2021/teams/timberwolves_schedule.json)
+    - [The Lynx 2021 roster](https://data.wnba.com/data/10s/v2015/json/mobile_teams/wnba/2021/teams/lynx_roster.json)
+    - [The Lynx 2021 schedule](https://data.wnba.com/data/10s/v2015/json/mobile_teams/wnba/2021/teams/lynx_schedule.json)
+  - Timberwolves Content API (video,article)
+    - [The Timberwolves latest articles](https://api.nba.net/2/timberwolves/article/?count=4)
+    - [The Timberwolves latest videos](https://api.nba.net/2/timberwolves/video/?count=4)
   - Timberwolves Content RSS
 
-**Tips & Guidelines**
+## Tools
+- [React](https://reactjs.org/) - main framework
+- [Talend API Tester](https://www.talend.com/) - check data
+- [MUI](https://mui.com/) - UI library
+- [Netlify](https://www.netlify.com/) - host
+- [axios](https://axios-http.com/) - promise-based HTTP Client
 
-- You can use any framework/tech stack you feel comfortable with.
-- Ideally you would use the provided APIs to pull data to build out your UI.
 
-## Tools & API:
+## Prerequisites
+- npm >= 8.4.0
+- node >= 16.13.0
 
-In the project directory, you can run:
+### Install
 
-### `npm start`
+Download or clone this project then run `npm install` to install
+dependencies in `package.json`:
+```html
+{
+  "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.4.2",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.0",
+    "gh-pages": "^3.2.3",
+    "gsap": "^3.9.1",
+    "material-ui-popup-state": "^2.0.0",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.1.2",
+    "react-dom": "^17.0.2",
+    "react-full-screen": "^1.1.0",
+    "react-icons": "^4.3.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-spring": "^9.4.3",
+    "styled-components": "^5.3.3",
+    "styled-reset": "^4.3.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "invariant": "^2.2.4",
+    "react-router-dom": "^6.2.1",
+    "reactjs-popup": "^2.0.5"
+  }
+}
+```
+### Usage
+`
+npm run start
+`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -26,57 +79,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+`npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Personal Checklist
+- [x] Research target audience
+- [x] Fetch NBA and WNBA API
+- [x] Simple new design for Minnesota Pack
+- [x] Landing page (navigation, sub navigation, logo, header, footer)
+- [x] Schedule Page with sub navigation for each team
+- [x] Players Page with sub navigation for each team
+- [ ] Latest news for Lynx
+- [ ] Responsive sor screen size
+- [ ] Stats  for each player
+- [ ] Schedule group by month
+- [ ] Coaches Information

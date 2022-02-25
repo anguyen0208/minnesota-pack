@@ -14,7 +14,7 @@ import {DecorativeBar, MainContainer} from "./styles/main";
 //pages
 import HomePage from "./components/pages/home/HomePage"
 import SchedulesPage from "./components/pages/schedules/SchedulesPage"
-import TeamsPage from "./components/pages/teams/TeamsPage"
+import PlayersPage from "./components/pages/players/PlayersPage"
 
 
 
@@ -40,7 +40,7 @@ function App(){
                 <Routes>
                     <Route path='/' element={<HomePage />} />
                     <Route path='/schedules/:team' element={<SchedulesPage team={teams.teamName}/>} />
-                    <Route path={`/teams/:team`} element={<TeamsPage team={teams.teamName}/>}/>
+                    <Route path='/players/:team' element={<PlayersPage team={teams.teamName}/>}/>
                 </Routes>
             </Router>
             <MainFooter/>

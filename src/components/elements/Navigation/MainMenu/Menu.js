@@ -18,7 +18,7 @@ const Menu = ({handleNavToggle}) => {
 
             <StyledMenu>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/schedules/timberwolves">SCHEDULES</StyledLink>
-                <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/teams/timberwolves">TEAMS</StyledLink>
+                <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle} to="/players/timberwolves">PLAYERS</StyledLink>
                 <a className="animate__animated animate__fadeInRight" href="https://www.targetcenter.com/" target='_blank' rel="noopener noreferrer">TARGET CENTER</a>
                 <CloseToggle className="animate__animated animate__fadeInRight" onClick={handleNavToggle}><FaTimes/></CloseToggle>
             </StyledMenu>

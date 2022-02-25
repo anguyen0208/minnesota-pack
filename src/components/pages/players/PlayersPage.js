@@ -7,14 +7,14 @@ import Player from "../../elements/Players/Player";
 import {useParams} from "react-router-dom";
 
 
-export default function TeamsPage() {
+export default function PlayersPage() {
 
     const{team} = useParams();
 
     return (
         <Wrapper>
             <PageTitleWrapper>
-                <PageTitle>TEAMS</PageTitle>
+                <PageTitle>PLAYERS</PageTitle>
             </PageTitleWrapper>
 
             <SubNavigation />

@@ -54,7 +54,7 @@ export default function LatestArticle() {
 
                             <Card sx={{ maxWidth: 445 }} key={article.nid}>
                                 <ImageListItem key={article.nid}>
-                                <a href={`https://www.nba.com${article.url}`} rel="noopener">
+                                <a href={`https://www.nba.com${article.url}`} target="_blank" rel="noopener">
                                         <CardMedia
                                             component="img"
                                             height="250"
@@ -82,18 +82,11 @@ export default function LatestArticle() {
 const LatestArticleContainer = styled.div`
     position: relative;
     margin: 100px 0 0 5%;
-    // display: block;
     background-color: ${colors.offWhite};
-
+    
+    a:hover {
+        transition: .2s all ease-in-out;
+        opacity: 50%;
+    }
 `;
 
-// const ArticleWrapper = styled.div`
-//     margin: 1px auto;
-//     background: black;
-//     overflow: hidden;
-//
-//
-//     a:hover {
-//     opacity: 50%;
-//
-// `

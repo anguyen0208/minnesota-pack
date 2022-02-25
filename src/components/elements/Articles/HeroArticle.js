@@ -48,7 +48,7 @@ class HeroArticle extends Component {
                     articles.map(article => {
                         return (
                                 <Hero key={article.headline}>
-                                    <a href={article.url} rel="noopener">
+                                    <a href={article.url} target="_blank" rel="noopener">
                                         <ImageListItem>
                                             <img src={article.listImage ? article.listImage.raw.ul : `${process.env.PUBLIC_URL}/assets/images/logo/img_1.png`}
                                                 alt={article.headline}/>

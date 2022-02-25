@@ -24,7 +24,7 @@ function MenuFooter () {
                 <MenuSponsorWrapper>
                     {menuSponsors.map((sponsor) => (
                         <MenuEachSponsor key={sponsor.id}>
-                            <a href={sponsor.url} rel="noopener">
+                            <a href={sponsor.url} target="_blank" rel="noopener">
                                 <img
                                     alt={sponsor.name}
                                     src={`${process.env.PUBLIC_URL}/assets/images/sponsors/${sponsor.name}-logo.png`}
